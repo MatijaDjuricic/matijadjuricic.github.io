@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Game Shop</title>
+</head>
+<body>
+<div class="loader-wrapper">
+    <div class="lds-facebook"><div></div><div></div><div></div></div>
+</div>
+
+<header>
+    <div class="pre-header">
+        <ul>
+            <li><a href="#">Our CVD response</a></li>
+            <li><a href="#">Downloads & Support</a></li>
+            <li><a href="#">EN</a></li>
+        </ul>
+    </div>
+
+    <nav>
+        <button id="hamburger-btn" class="hamburger-menu-button"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+
+        <ul>
+            <li><a href="#"><img src="img/logo.svg"></a></li>
+            <li><a href="#">Mice</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Headsets</a></li>
+            <li><a href="#">Mousepads</a></li>
+        </ul>
+
+        <div class="nav-right-side">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+        </div>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h1>Flip the <span>switch</span></h1>
+
+    <video preload="auto" muted="true" autoplay="" loop="" playsinline="true" src="img/video.mp4"></video>
+</section>
+
+<section class="featured">
+    <div class="featured-item"  data-animation="animate__fadeInUp" data-animation-delay="0.3">
+        <img src="img/keyboard.png">
+        <h2>VULCAN TKL PRO</h2>
+        <p>Tenkeyless form factor
+            Titan Switch Optical
+            AIMO intelligent lighting engine
+            Mixer-style media controls
+            Detachable braided USB-C cable</p>
+
+        <a href="#">More Information</a>
+    </div>
+
+    <div class="featured-item" data-animation="animate__fadeInUp" data-animation-delay="0.5">
+        <img src="img/mouse.png">
+        <h2>BURST PRO</h2>
+        <p>Extreme lightweight shell – only 68g
+            Titan Switch Optical speed & precision
+            PhantomFlexTM cable virtually disappears
+            Heat-treated pure PTFE glides</p>
+
+        <a href="#">More Information</a>
+    </div>
+
+    <div class="featured-item" data-animation="animate__fadeInUp" data-animation-delay="0.7">
+        <img src="img/headset.png">
+        <h2>ELO 7.1 AIR</h2>
+        <p>Self-Adjusting Metal Headband
+            Glasses Friendly Memory Foam Cushions
+            Supreme stereo sound
+            Crystal clear TruSpeak mic technology
+            Cross-platform Compatibility</p>
+
+        <a href="#">More Information</a>
+    </div>
+</section>
+
+<section class="products">
+    <h2>At ROCCAT, we're passionate about developing premium gaming hardware that makes you play better. German engineering since 2007.</h2>
+
+    <div class="container">
+        <div class="product-item product-keyboard" data-animation="animate__fadeInLeft" data-animation-delay="0.3">
+            <div class="product-info">
+                <h3>Vulcan pro</h3>
+                <p>Optical RGB Gaming Keyboard</p>
+            </div>
+
+            <div class="overlay">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="product-item product-headset" data-animation="animate__fadeInRight" data-animation-delay="0.3">
+            <div class="product-info">
+                <h3>Elo 7.1 USB</h3>
+                <p>Surround Sound RGB Gaming Headset</p>
+            </div>
+
+            <div class="overlay">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="search-wrapper">
+    <a href="#" id="close-search"><i class="fas fa-times"></i></a>
+    <form action="">
+        <input type="text" placeholder="Keywords...">
+        <button>Search</button>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

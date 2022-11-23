@@ -1,0 +1,114 @@
+@keyframes typing {
+    from {
+       width: 0
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+* {
+  background-color: black; 
+}
+h1 {
+    color: limegreen;
+    display: inline-block;
+    width:  10ch;
+    animation: typing 2s steps(10), blink .1s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Permanent Marker", cursive;
+    font-size: 50px;
+}
+.cell {
+    width: 140px;
+    height: 140px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 120px;
+    font-size: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+#gameContainer {
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 430px;
+    margin: auto;
+    color: red;
+}
+#statusText {
+    color: yellowgreen;
+    font-size: 30px;
+}
+button {
+    background-color: black;
+    color: yellowgreen;
+    border-color: red;
+    width: 140px;
+    height: 75px;
+    border-radius: 6px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+}
+button:hover {
+    color: red;
+    border-color: yellowgreen;
+}
+#playerX {
+    color:red;
+    font-family: "Permanent Marker", cursive;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    margin: auto;
+}
+#playerO {
+    color: yellowgreen;
+    font-family: "Permanent Marker", cursive;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: auto;
+}
+#submit1 {
+    position: absolute;
+    left: 3px;
+    background-color: black;
+    color: yellowgreen;
+    border-color: red;
+    top: 50px;
+    left: 15px;
+    width: 50px;
+    height: 23px;
+    border-radius: 3px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 11px;
+}
+#submit1:hover {
+    color: red;
+    border-color: yellowgreen;
+}
+#submit2 {
+    position: absolute;
+    right: 3px;
+    background-color: black;
+    color: red;
+    border-color: yellowgreen;
+    top: 50px;
+    right: 15px;
+    width: 50px;
+    height: 23px;
+    border-radius: 3px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 11px;
+}
+#submit2:hover {
+    color: yellowgreen;
+    border-color: red;
+}

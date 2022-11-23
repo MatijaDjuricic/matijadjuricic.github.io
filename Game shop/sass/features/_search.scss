@@ -1,0 +1,30 @@
+.search-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 3;
+  text-align: center;
+  padding: 150px;
+
+  a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $white;
+    font-size: 22px;
+  }
+
+  form {
+    display: block;
+    margin: auto;
+
+    input {
+      height: 50px;
+      width: 70%;
+    }
+  }
+}

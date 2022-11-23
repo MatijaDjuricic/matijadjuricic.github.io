@@ -1,0 +1,49 @@
+section.featured {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  color: $white;
+  background-image: linear-gradient(to top, #1b1b1b 0%, #373737 100%);
+  padding-bottom: 100px;
+
+  @media (max-width: $md) {
+    display: block;
+  }
+
+  .featured-item {
+    margin-top: -160px;
+    z-index: 1;
+
+    @media (max-width: $lg) {
+      padding: 15px;
+      margin-top: 0;
+    }
+
+    img {
+      width: 500px;
+
+      @media (max-width: 1500px) {
+        width: 350px;
+      }
+
+      @media (max-width: $xl) {
+        width: 100%;
+      }
+
+      @media (max-width: $md) {
+        display: block;
+        margin: auto;
+        width: auto;
+      }
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+
+    p {
+      max-width: 300px;
+      margin: auto;
+    }
+  }
+}
