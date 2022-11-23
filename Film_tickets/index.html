@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <link charset="utf-8">
+<head>
+<title>Buy a tickets</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="img/bgimg.jpg">
+</head>
+<body>
+    <h1>Buy a tickets</h1>
+	<div class="container">
+		<div class="items">
+			<h2>Films:</h2>
+			<div class="single-item">
+				<img src="img/iconjb.jpg">
+				<div class="si-content">
+					<h3>James Bond - No time to die</h3>
+					<p class="price">$35</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="buyTicket(this)">Buy</button>
+				</div>
+			</div>
+			<div class="single-item">
+				<img src="img/miimg.jpg">
+				<div class="si-content">
+					<h3>Mission impossible - 3</h3>
+					<p class="price">$30</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="buyTicket(this)">Buy</button>
+				</div>
+			</div>
+			<div class="single-item">
+				<img class="imgij" src="img/indianajones.jpg">
+				<div class="si-content">
+					<h3>Indiana Jones - 4</h3>
+					<p class="price">$25</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="buyTicket(this)">Buy</button>
+				</div>
+			</div>
+			<div class="single-item">
+				<img src="img/terminator.jpg">
+				<div class="si-content">
+					<h3>Teriminator - 2</h3>
+					<p class="price">$20</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="buyTicket(this)">Buy</button>
+				</div>
+			</div>
+			<div class="single-item">
+				<img src="img/8.p.jpg">
+				<div class="si-content">
+					<h3>Alians</h3>
+					<p class="price">$15</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="buyTicket(this)">Buy</button>
+				</div>
+			</div>
+		</div>
+		<div class="totalall">
+			<h2>Price:</h2>
+			<div class="total-items"></div>
+			<div class="total"></div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
