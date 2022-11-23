@@ -1,0 +1,938 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("./img/stars-sky.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+::-moz-selection {
+  background-color: rgb(220, 10, 10);
+}
+
+::selection {
+  background-color: rgb(220, 10, 10);
+}
+
+span::-moz-selection {
+  background-color: transparent;
+}
+
+span::selection {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  border-bottom-left-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(220, 10, 10);
+  border-bottom-left-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+}
+
+header .pre-header {
+  background: linear-gradient(to right, #161616 0%, rgb(219, 10, 10) 100%);
+  max-height: 30px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  display: table;
+  width: 100%;
+}
+header .pre-header ul {
+  list-style: none;
+  float: right;
+}
+header .pre-header ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header .pre-header ul li:first-child a {
+  font-size: 25px;
+  font-family: "Courgette", cursive;
+  margin-right: -25px;
+  display: none;
+  cursor: none;
+}
+header .pre-header ul li a {
+  font-size: 25px;
+  margin-left: 20px;
+  padding-bottom: 0;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+header nav {
+  background-color: #000;
+  width: 100%;
+  z-index: 2;
+}
+header nav.fixed-nav {
+  position: fixed;
+  top: 0;
+  transition: 3s;
+}
+@media (max-width: 991px) {
+  header nav.fixed-nav {
+    position: initial;
+  }
+}
+header nav .hamburger-menu-button {
+  background-color: transparent;
+  border: none;
+  font-size: 38px;
+  color: #fff;
+  display: none;
+  outline: none;
+}
+header nav .hamburger-menu-button .fa-times {
+  display: none;
+}
+header nav .hamburger-menu-button.opened .fa-times {
+  display: block;
+}
+header nav .hamburger-menu-button.opened .fa-bars {
+  display: none;
+}
+@media (max-width: 991px) {
+  header nav .hamburger-menu-button {
+    display: block;
+  }
+}
+header nav .border-line {
+  height: 2px;
+  width: 0;
+  background-color: rgb(220, 10, 10);
+  transition: all 3s ease;
+}
+header nav ul {
+  list-style: none;
+  float: left;
+}
+@media (max-width: 991px) {
+  header nav ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+    left: 0;
+    right: 0;
+  }
+}
+header nav ul li {
+  background-color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 20px;
+}
+@media (max-width: 991px) {
+  header nav ul li {
+    margin-left: 0;
+  }
+}
+header nav ul li:first-child {
+  float: left;
+  margin-top: -10px;
+  background: none;
+}
+header nav ul li:first-child a:hover:after {
+  display: none;
+}
+header nav ul li a {
+  color: rgb(220, 10, 10);
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+  background-color: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  float: right;
+  cursor: pointer;
+}
+header nav ul li a:hover:after {
+  display: block;
+}
+header nav ul li a:after {
+  content: "";
+  display: none;
+  height: 2px;
+  background-color: rgb(220, 10, 10);
+  width: 100%;
+  position: absolute;
+}
+header nav ul li a span {
+  color: rgb(220, 10, 10);
+  font-family: "Courgette", cursive;
+  margin-left: 5px;
+  text-decoration: none;
+  -webkit-text-decoration: border 2px solid rgb(220, 10, 10);
+          text-decoration: border 2px solid rgb(220, 10, 10);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 500;
+  position: relative;
+  background-color: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  border-radius: 5px;
+}
+header nav ul li a span:hover {
+  text-decoration: underline;
+}
+header nav .nav-right-side {
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+header nav .nav-right-side a {
+  color: #fff;
+  font-size: 24px;
+}
+@media (max-width: 991px) {
+  header nav .nav-right-side {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+  }
+}
+header nav .nav-right-side a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.search-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  text-align: center;
+  padding: 15%;
+}
+.search-wrapper a {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  color: #fff;
+  font-size: 24px;
+}
+.search-wrapper form {
+  display: block;
+  margin: auto;
+  max-width: 1250px;
+}
+.search-wrapper form input {
+  color: rgb(220, 10, 10);
+  font-size: 24px;
+  height: 50px;
+  width: 30%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding-left: 10px;
+}
+.search-wrapper form button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 24px;
+  margin-left: -40px;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+section.section1 {
+  height: 90vh;
+}
+section.section1 .hello {
+  color: #fff;
+  font-size: 68px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+@media (max-width: 1199px) {
+  section.section1 .hello {
+    font-size: 38px;
+    margin-left: 170px;
+  }
+}
+@media (max-width: 1060px) {
+  section.section1 .hello {
+    font-size: 38px;
+    margin-left: 130px;
+  }
+}
+@media (max-width: 991px) {
+  section.section1 .hello {
+    font-size: 22px;
+    margin-left: 100px;
+  }
+}
+section.section1 p {
+  color: #fff;
+  margin-left: 250px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+@media (max-width: 1199px) {
+  section.section1 p {
+    font-size: 16px;
+    font-weight: 50;
+    margin-left: 170px;
+  }
+}
+@media (max-width: 1060px) {
+  section.section1 p {
+    font-size: 14px;
+    margin-left: 130px;
+  }
+}
+@media (max-width: 991px) {
+  section.section1 p {
+    font-size: 12px;
+    margin-left: 100px;
+  }
+}
+section.section1 p span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-transform: lowercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+section.section1 h1 {
+  color: #fff;
+  font-size: 68px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-left: 250px;
+}
+@media (max-width: 1199px) {
+  section.section1 h1 {
+    font-size: 38px;
+    margin-left: 170px;
+  }
+}
+@media (max-width: 1060px) {
+  section.section1 h1 {
+    font-size: 38px;
+    margin-left: 130px;
+  }
+}
+@media (max-width: 991px) {
+  section.section1 h1 {
+    font-size: 22px;
+    margin-left: 100px;
+  }
+}
+section.section1 h1 .name {
+  font-family: "Patrick Hand", cursive;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+@media (max-width: 1199px) {
+  section.section1 h1 .name {
+    font-size: 38px;
+  }
+}
+@media (max-width: 1060px) {
+  section.section1 h1 .name {
+    font-size: 38px;
+  }
+}
+@media (max-width: 991px) {
+  section.section1 h1 .name {
+    font-size: 22px;
+  }
+}
+section.section1 h1 span {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 600;
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+@media (max-width: 1199px) {
+  section.section1 h1 span {
+    font-size: 38px;
+  }
+}
+@media (max-width: 1060px) {
+  section.section1 h1 span {
+    font-size: 38px;
+  }
+}
+@media (max-width: 991px) {
+  section.section1 h1 span {
+    font-size: 22px;
+  }
+}
+section.section1 .laptop {
+  height: 350px;
+  width: 440px;
+  position: relative;
+  float: right;
+  margin-right: 5%;
+  margin-top: -17%;
+}
+section.section1 .laptop i {
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  font-size: 350px;
+  margin: auto;
+}
+@media (max-width: 1665px) {
+  section.section1 .laptop i {
+    font-size: 200px;
+  }
+}
+@media (max-width: 1199px) {
+  section.section1 .laptop i {
+    font-size: 150px;
+    margin-top: -150px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1160px) {
+  section.section1 .laptop i {
+    font-size: 140px;
+    margin-top: 20px;
+    margin-right: 45%;
+  }
+}
+section.section1 .arrow {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  bottom: -30%;
+  left: 45%;
+}
+section.section1 .arrow i {
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  font-size: 220px;
+  position: absolute;
+  margin: auto;
+}
+section.section1 .coding {
+  width: 190px;
+  height: 150px;
+  position: relative;
+  left: 10%;
+  bottom: 10%;
+}
+section.section1 .coding i {
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  font-size: 150px;
+  position: absolute;
+  margin: auto;
+}
+section.section1 .files {
+  width: 180px;
+  height: 160px;
+  position: relative;
+  float: right;
+  bottom: 28%;
+  right: 10%;
+}
+section.section1 .files i {
+  background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+  font-size: 160px;
+  position: absolute;
+  margin: auto;
+}
+
+section.section2 {
+  height: 100vh;
+  font-family: "Courgette", cursive;
+  position: relative;
+}
+section.section2 h1 {
+  color: rgb(220, 10, 10);
+  padding-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  background-color: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+section.section2 img {
+  height: 860px;
+  width: 400px;
+}
+section.section2 img.image-moved {
+  float: right;
+}
+section.section2 .button-invert {
+  cursor: pointer;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  font-size: 32px;
+  right: 44%;
+  top: 40%;
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #000;
+  letter-spacing: 3px;
+  z-index: 1;
+  border: 2px solid rgb(220, 10, 10);
+  border-radius: 5px;
+  --border-size: 3px;
+}
+section.section2 .button-invert:hover {
+  color: #000;
+}
+section.section2 .button-invert:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  border: var(--border-size) solid rgb(220, 10, 10);
+  transition: top, bottom, left, right, 300ms ease-in-out;
+}
+section.section2 .button-invert:hover::before {
+  top: calc(var(--border-size) * -3);
+  bottom: calc(var(--border-size) * -3);
+  right: calc(var(--border-size) * -3);
+  left: calc(var(--border-size) * -3);
+}
+section.section2 .button-invert::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(220, 10, 10);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 300ms ease-in;
+}
+section.section2 .button-invert-after::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+section.section2 .button-invert-after:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+section.section2 #aboutMeText {
+  color: #fff;
+  font-family: "Courgette", cursive;
+  max-width: 380px;
+  float: right;
+  margin-top: 10%;
+  margin-right: 5%;
+  border: 3px solid rgb(220, 10, 10);
+  border-radius: 10px;
+  padding: 20px;
+}
+section.section2 #aboutMeText.text-moved {
+  float: left;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+section.section2 #aboutMeText:hover {
+  border: 3px solid #fff;
+}
+section.section2 .read-more {
+  color: rgb(220, 10, 10);
+  font-family: "Courgette", cursive;
+  font-size: 16px;
+  background-color: transparent;
+}
+section.section2 .read-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  text-align: left;
+  padding: 15%;
+}
+section.section2 .read-wrapper a {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  color: #fff;
+  font-size: 24px;
+}
+section.section2 .read-wrapper p {
+  color: #fff;
+}
+
+section.section3 {
+  height: 100vh;
+  font-family: "Courgette", cursive;
+}
+section.section3 h1 {
+  color: rgb(220, 10, 10);
+  padding-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  background-color: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+section.section3 .grid-container {
+  height: 92vh;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+section.section3 .grid-container i {
+  font-size: 100px;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+section.section3 .grid-container p {
+  margin-left: 30%;
+  position: absolute;
+  padding-top: 4%;
+  font-size: 20px;
+}
+section.section3 .grid-container .charts {
+  float: right;
+  margin-right: 10%;
+}
+section.section3 .grid-container .charts canvas {
+  height: 170px !important;
+  margin: auto;
+}
+section.section3 .grid-container .html {
+  color: rgb(220, 10, 10);
+}
+section.section3 .grid-container .css {
+  color: rgb(0, 108, 255);
+}
+section.section3 .grid-container .js {
+  color: rgb(185, 255, 0);
+}
+section.section3 .grid-container .php {
+  color: rgb(55, 0, 255);
+}
+section.section3 .grid-container .php i {
+  margin-left: 50px;
+}
+section.section3 .grid-container .sql {
+  color: rgb(227, 227, 227);
+}
+
+section.section4 {
+  height: 100vh;
+  font-family: "Courgette", cursive;
+}
+section.section4 h1 {
+  color: rgb(220, 10, 10);
+  padding-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  background-color: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+  -webkit-animation: hue 10s infinite linear;
+          animation: hue 10s infinite linear;
+}
+section.section4 #statusText {
+  color: rgb(220, 10, 10);
+  font-size: 22px;
+  position: absolute;
+  margin-left: 20%;
+}
+section.section4 #statusNum {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  float: right;
+  margin-right: 20%;
+}
+section.section4 .slider-wrapper {
+  max-width: 1250px;
+  height: 750px;
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+  border: 3px solid #fff;
+  border-radius: 8px;
+}
+section.section4 .slider-wrapper:hover {
+  border: 3px solid rgb(220, 10, 10);
+}
+section.section4 .slider-wrapper:hover .arrow {
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+}
+section.section4 .slider-wrapper .slider-images {
+  position: relative;
+  height: 100%;
+  transition: 0.3s;
+}
+section.section4 .slider-wrapper .slider-images:hover {
+  transition: 0.3s;
+}
+section.section4 .slider-wrapper .slider-images:hover .overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section.section4 .slider-wrapper .slider-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  border-radius: 5px;
+}
+section.section4 .slider-wrapper .slider-images img:first-child {
+  display: block;
+}
+section.section4 .slider-wrapper button {
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  top: 40%;
+  position: absolute;
+  z-index: 3;
+  border-radius: 3px;
+}
+section.section4 .slider-wrapper button .arrow {
+  border: solid rgb(220, 10, 10);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  transition: transform 0.3s ease-out;
+  outline: none;
+}
+section.section4 .slider-wrapper #right-btn {
+  right: 0;
+}
+section.section4 .slider-wrapper #right-btn .arrow {
+  transform: rotate(-45deg);
+}
+section.section4 .slider-wrapper #left-btn {
+  left: 0;
+}
+section.section4 .slider-wrapper #left-btn .arrow {
+  transform: rotate(135deg);
+}
+section.section4 .slider-wrapper .overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+section.section4 .slider-wrapper .overlay .linkButton {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: auto;
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  font-family: "Courgette", cursive;
+  width: 150px;
+  height: 50px;
+  letter-spacing: 2px;
+  z-index: 1;
+  border: 2px solid rgb(220, 10, 10);
+  border-radius: 5px;
+  --border-size: 3px;
+}
+section.section4 .slider-wrapper .overlay .linkButton:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  border: var(--border-size) solid rgb(220, 10, 10);
+  transition: top, bottom, left, right, 300ms ease-in-out;
+}
+section.section4 .slider-wrapper .overlay .linkButton:hover::before {
+  top: calc(var(--border-size) * -3);
+  bottom: calc(var(--border-size) * -3);
+  right: calc(var(--border-size) * -3);
+  left: calc(var(--border-size) * -3);
+}
+section.section4 .slider-wrapper .overlay .linkButton::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(220, 10, 10);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 300ms ease-in;
+}
+section.section4 .slider-wrapper .overlay .linkButton-after::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+section.section4 .slider-wrapper .overlay .linkButton-after:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.loader-wrapper {
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 5;
+  padding-top: 20%;
+}
+
+.lds-facebook {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}/*# sourceMappingURL=style.css.map */
