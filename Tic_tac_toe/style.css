@@ -9,7 +9,7 @@
     }
 }
 * {
-  background-color: black; 
+  background-color: black;
 }
 h1 {
     color: limegreen;
@@ -18,7 +18,7 @@ h1 {
     animation: typing 2s steps(10), blink .1s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker";
     font-size: 50px;
 }
 .cell {
@@ -32,8 +32,16 @@ h1 {
     cursor: pointer;
 }
 #gameContainer {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker";
     text-align: center;
+}
+.fname1 {
+  width: 100px;
+  color: red;
+}
+.fname2 {
+  width: 100px;
+  color: yellowgreen;
 }
 #cellContainer {
     display: grid;
@@ -53,7 +61,7 @@ button {
     width: 140px;
     height: 75px;
     border-radius: 6px;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker";
     font-size: 30px;
 }
 button:hover {
@@ -62,7 +70,7 @@ button:hover {
 }
 #playerX {
     color:red;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker";
     top: 10px;
     left: 10px;
     position: absolute;
@@ -70,45 +78,9 @@ button:hover {
 }
 #playerO {
     color: yellowgreen;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker";
     position: absolute;
     top: 10px;
     right: 10px;
     margin: auto;
-}
-#submit1 {
-    position: absolute;
-    left: 3px;
-    background-color: black;
-    color: yellowgreen;
-    border-color: red;
-    top: 50px;
-    left: 15px;
-    width: 50px;
-    height: 23px;
-    border-radius: 3px;
-    font-family: "Permanent Marker", cursive;
-    font-size: 11px;
-}
-#submit1:hover {
-    color: red;
-    border-color: yellowgreen;
-}
-#submit2 {
-    position: absolute;
-    right: 3px;
-    background-color: black;
-    color: red;
-    border-color: yellowgreen;
-    top: 50px;
-    right: 15px;
-    width: 50px;
-    height: 23px;
-    border-radius: 3px;
-    font-family: "Permanent Marker", cursive;
-    font-size: 11px;
-}
-#submit2:hover {
-    color: yellowgreen;
-    border-color: red;
 }
