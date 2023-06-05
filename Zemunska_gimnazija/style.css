@@ -13,6 +13,9 @@ a {
     color: #fff;
     text-decoration: none;
 }
+a, i {
+    cursor: pointer;
+}
 .header {
     position: fixed;
     max-width: 100%;
@@ -76,7 +79,7 @@ ul li a {
     font-size: 18px;
     text-decoration: none;
     cursor: pointer;
-    padding: 30px 20px 30px 20px;
+    padding: 28px 20px 28px 20px;
 }
 ul li a:hover {
     background-color: #022145;
@@ -207,15 +210,22 @@ ul li a:hover {
     font-weight: 800;
 }
 .hamburger-menu-button {
-    padding: 0 30px 0 0;
     background-color: transparent;
+    margin-right: 20px;
     border: none;
+    color: #fff;
     font-size: 38px;
-    color: white;
     display: none;
     outline: none;
+    cursor: pointer;
 }
-.fa-times {
+.hamburger-menu-button .fa-times {
+    display: none;
+}
+.hamburger-menu-button.opened .fa-times {
+    display: block;
+}
+.hamburger-menu-button.opened .fa-bars {
     display: none;
 }
 /* slider section(1) */
@@ -495,6 +505,45 @@ xxl: 1400px
     }
     ul {
         display: none;
+        width: 100%;
+        position: absolute;
+        background-color: #022145;
+        top: 50px;
+        left: 0;
+        right: 0;
+    }
+    li {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    ul li a {
+        padding: 0;
+        font-size: 22px;
+    }
+    a:hover {
+        text-decoration: underline;
+        background-color: none;
+    }
+    .info-overlay p {
+        font-size: 24px;
+    }
+    .close-overlay i {
+        font-size: 32px;
+    }
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    .info-group {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .info-wrapper a {
+        font-size: 22px;
     }
     .footer-container {
        height: 100%; 
@@ -587,7 +636,7 @@ xxl: 1400px
     }
     .hamburger-menu-button {
         padding-right: 20px;
-        font-size: 24px;
+        font-size: 32px;
     }
     .hero-tittle h1 {
         font-size: 42px;
