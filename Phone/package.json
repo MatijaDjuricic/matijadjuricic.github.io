@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "react-reveal": "^1.2.2",
-    "sass": "^1.57.1"
-  }
-}
