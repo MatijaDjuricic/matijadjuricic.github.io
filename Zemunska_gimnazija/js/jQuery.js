@@ -7,4 +7,10 @@ jQuery(document).ready(function ($) {
         }
         $(this).toggleClass('opened');
     });
+    $("nav ul li a").click(function () {
+        if($("#hamburger-btn").hasClass('opened')) {
+            $("nav ul").slideUp();
+        }
+        $("#hamburger-btn").toggleClass('opened');
+    });
 });

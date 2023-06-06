@@ -1,4 +1,3 @@
-/*more-info button*/
 let hero_tittle = document.querySelector(".hero-tittle");
 let more_info_overlay = document.querySelector(".info-overlay");
 document.querySelector(".more-info-btn").addEventListener("click",  () => {
@@ -10,7 +9,6 @@ document.querySelector(".close-overlay").addEventListener("click", () => {
     hero_tittle.style.display = "block";
     more_info_overlay.style.display = "none";
 });
-/*scrolling line*/
 document.addEventListener('scroll', () => {
     const line = document.querySelector('.scrolling-line');
     const { scrollTop, scrollHeight } = document.documentElement;
@@ -18,7 +16,6 @@ document.addEventListener('scroll', () => {
     let scroll = `${scrolling}%`;
     line.style.setProperty('--line-width', scroll);
 });
-/*slider functions*/
 const linkBtn = document.querySelector('#linkButton');
 let rightBtn = document.querySelector('#right-btn');
 let leftBtn = document.querySelector('#left-btn');

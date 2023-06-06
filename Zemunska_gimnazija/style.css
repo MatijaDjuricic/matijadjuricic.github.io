@@ -228,7 +228,6 @@ ul li a:hover {
 .hamburger-menu-button.opened .fa-bars {
     display: none;
 }
-/* slider section(1) */
 .slider-section .section-slider-wrapper {
     display: block;
     margin: auto;
@@ -371,7 +370,6 @@ ul li a:hover {
     transform: scaleX(1);
     transform-origin: left;
 }
-/* section(2) */
 .section2 {
     height: 90vh;
     width: 100%;
@@ -406,7 +404,6 @@ ul li a:hover {
     height: 100%;
     border-radius: 10px;
 }
-/* section3 footer */
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -491,14 +488,6 @@ a i {
     color: #fff;
     font-size: 16px;
 }
-/* Media Queries */
-/* Bootstrap breakpoints 
-sm: 576px,
-md: 768px,
-lg: 992px,
-xl: 1200px,
-xxl: 1400px 
-*/
 @media (max-width: 1400px) {
     .hamburger-menu-button {
         display: block;
