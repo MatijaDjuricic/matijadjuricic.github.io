@@ -1,3 +1,52 @@
+Dialogs: 
+private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.LoadFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SelectionColor = colorDialog1.Color;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.SelectionFont = fontDialog1.Font;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            if (form2.ShowDialog() == DialogResult.Cancel)
+            {
+                richTextBox1.Text = "zatvorena druga forma";
+            }
+            else {
+                form2.Show();
+            }
+        }
+-------------
+Class: 
+        private static string content;
+        public string Content { get => content; set => content = value; }
+-------------
 functions: 
 	private void button6_Click(object sender, EventArgs e)
         {
@@ -27,6 +76,25 @@ functions:
                 button7.Text = "sakri sifru";
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Class content = new Class();
+            int br_dana;
+            string startDate = monthCalendar1.SelectionRange.Start.ToString("dd MMM yyyy");
+            string endDate = monthCalendar1.SelectionRange.End.ToString("dd MMM yyyy");
+            TimeSpan trajanje = monthCalendar1.SelectionEnd - monthCalendar1.SelectionStart;
+            br_dana = (int)trajanje.Days + 1;
+            richTextBox1.Text =
+                    $"Ime: {textBox1.Text}\r\n" +
+                    $"Prezime: {textBox2.Text}\r\n" +
+                    $"Sifra: {textBox3.Text}\r\n" +
+                    $"Pol: {pol}\r\n" +
+                    $"Broj godina: {trackBar1.Value}\r\n" +
+                    $"Trajanje odmor od {startDate} do {endDate}\r\n" +
+                    $"Trajanje odmora u danima: {br_dana} dana";
+            content.Content = richTextBox1.Text;
+        }
+---------------
 progres bar:
 	private void Form1_Load(object sender, EventArgs e)
         {
@@ -299,36 +367,3 @@ files:
                 }
             }
 	}
----------------------------
-Dialogs: 
-private void button1_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                richTextBox1.LoadFile(openFileDialog1.FileName);
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                richTextBox1.SaveFile(saveFileDialog1.FileName);
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                richTextBox1.SelectionColor = colorDialog1.Color;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (fontDialog1.ShowDialog() == DialogResult.OK)
-            {
-                richTextBox1.SelectionFont = fontDialog1.Font;
-            }
-        }
