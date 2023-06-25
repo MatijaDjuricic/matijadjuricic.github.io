@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+h1, span {
+    font-family: 'Bruno Ace', cursive;
+}
+p, a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none !important;
+}
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background-color: #363333;
+    z-index: 4;
+}
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.left-side h1 {
+    font-size: 32px;
+    padding: 20px;
+    color: #00ADB5;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+ul li {
+    padding: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+    color: #E16428;
+}
+.hamburger-menu-button {
+    background-color: transparent;
+    margin-right: 20px;
+    border: none;
+    color: #E16428;
+    font-size: 38px;
+    display: none;
+    outline: none;
+    cursor: pointer;
+}
+.hamburger-menu-button .fa-times {
+    display: none;
+}
+.hamburger-menu-button.opened .fa-times {
+    display: block;
+}
+.hamburger-menu-button.opened .fa-bars {
+    display: none;
+}
+@media (max-width: 1400px) {
+    .hamburger-menu-button {
+        display: block;
+    }
+    ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        background-color: #363333;
+        top: 80px;
+        left: 0;
+        right: 0;
+    }
+    li {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+    }
+    ul li a {
+        padding: 0;
+        font-size: 22px;
+    }
+}
+/* hero section (1)*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    background-color: none !important;
+}
+.video-overlay {
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-section video {
+    width: 100%;
+}
+/* hero contact button */
+.hero-contact-btn {
+    font-family: 'Bruno Ace', cursive;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #E16428;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    border: 1px solid #00ADB5;
+    transition: 0.2s;
+}
+.hero-contact-btn:hover {
+    color: #00ADB5;
+    background: #E16428;
+    box-shadow: 0 0 10px #E16428, 0 0 40px #E16428, 0 0 80px #E16428;
+    transition-delay: 1s;
+}
+.hero-contact-btn span {
+    position: absolute;
+    display: block;
+}
+.hero-contact-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #E16428);
+}
+.hero-contact-btn:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+.hero-contact-btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #E16428);
+}
+.hero-contact-btn:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.hero-contact-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #E16428);
+}
+.hero-contact-btn:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.hero-contact-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #E16428);
+}
+.hero-contact-btn:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.hero-wrapper {
+    z-index: 2;
+    margin: auto;
+    position: absolute;
+    inset: 25% 30% 35% 30%;
+}
+.hero-wrapper span {
+    font-size: 64px;
+    color: #E16428;
+    width: 21ch;
+    animation: typing 4s steps(200),
+                blink.4s step-end;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.hero-wrapper p {
+    padding-top: 10px;
+    font-size: 24px;
+    color: #F6E9E9;
+    animation: typing 4s steps(200),
+                blink.4s step-end;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes typing {
+    from {
+            width: 0;
+        }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+/* about me section */
+.about-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: #272121;
+}
+.about-section h1 {
+    font-size: 42px;
+    color: #00ADB5;
+    padding-top: 90px;
+}
+/* profles section */
+.profiles-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: #696969;
+}
+.profiles-section h1 {
+    font-size: 42px;
+    color: #00ADB5;
+    padding-top: 90px;
+}
+/* clients section */
+.clients-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: #272121;
+}
+.clients-section h1 {
+    font-size: 42px;
+    color: #00ADB5;
+    padding-top: 90px;
+}
+/* contact section */
+.contact-section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: #696969;
+}
+.contact-section h1 {
+    font-size: 42px;
+    color: #00ADB5;
+    padding-top: 90px;
+}
