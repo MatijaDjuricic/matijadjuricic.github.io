@@ -336,7 +336,8 @@ header nav ul li a:hover:after {
     margin: auto;
 }
 .logo-container img {
-    border-radius: 0 10px 10px 0;
+    margin-left: 30px;
+    border-radius: 10px;
 }
 .about-me-text {
     text-align: center;
