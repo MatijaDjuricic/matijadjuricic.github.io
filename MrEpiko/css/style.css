@@ -209,9 +209,9 @@ header nav ul li a:hover:after {
     padding: 15px 30px;
     color: #E16428;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 22px;
     overflow: hidden;
     border: 1px solid #00ADB5;
     transition: 0.2s;
