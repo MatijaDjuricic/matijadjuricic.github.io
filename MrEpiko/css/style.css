@@ -358,6 +358,7 @@ header nav ul li a:hover:after {
 }
 /* clients section */
 .clients-section {
+    position: relative;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -367,6 +368,43 @@ header nav ul li a:hover:after {
     font-size: 42px;
     color: #00ADB5;
     padding-top: 90px;
+}
+.clients-wrapper {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 50px;
+    margin: 50px 150px 0 150px;
+}
+.items {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #363333;
+    opacity: 0.8;
+    border-radius: 10px;
+    filter: drop-shadow(85px 20px 10px #000);
+}
+.jartex-network-img, .lunaty-img {
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+}
+.craftgames-img, .pika-network-img, .zekcord-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.items:hover {
+    transition: 0.5s ease;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.items:not(:hover) {
+    transition: 0.5s ease;
+    transform: scale(1);
 }
 /* contact section */
 .contact-section {
