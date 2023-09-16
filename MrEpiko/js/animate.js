@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-// ANIMATIONS - (animate css - jQuery script)
     var $animation_elements = $('[data-animation]');
     var $window = $(window);
     function check_if_in_view() {

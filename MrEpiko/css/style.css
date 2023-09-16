@@ -182,8 +182,7 @@ header nav ul li a:hover:after {
         top: 8px;
         height: 64px;
     }
-    50%,
-    100% {
+    50%, 100% {
         top: 24px;
         height: 32px;
     }
@@ -191,15 +190,7 @@ header nav ul li a:hover:after {
 /* hero section (1)*/
 .hero-section {
     position: relative;
-    background-color: #00ADB5;
-}
-.video-overlay {
-    position: absolute;
-    inset: 0 0 0 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.hero-section video {
-    width: 100%;
+    background-color: #696969;
 }
 /* hero contact button */
 .hero-contact-btn {
@@ -274,10 +265,10 @@ header nav ul li a:hover:after {
     transition-delay: 0.75s;
 }
 .hero-wrapper {
-    z-index: 2;
-    margin: auto;
-    position: absolute;
-    inset: 25% 30% 35% 30%;
+    position: relative;
+    padding-top: 250px;
+    padding-left: 30%;
+    padding-bottom: 250px;
 }
 .hero-wrapper span {
     font-size: 64px;
@@ -312,8 +303,8 @@ header nav ul li a:hover:after {
 }
 /* about me section */
 .about-section {
-    height: 100vh;
     width: 100%;
+    padding-bottom: 200px;
     text-align: center;
     background-color: #272121;
     text-align: center;
@@ -344,6 +335,45 @@ header nav ul li a:hover:after {
     color: #fff;
     padding: 100px;
 }
+@media(max-width: 1400px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+    .logo-container img {
+        margin: 30px 0 0 0;
+        border-radius: 10px;
+    }
+    .about-me-text {
+        text-align: center;
+        color: #fff;
+        padding: 30px;
+    }
+}
+@media(max-width: 640px) {
+    .logo-container {
+            margin: auto;
+            width: 80%;
+        }
+    .logo-container img {
+        width: 250px;
+        height: 150px;
+        border-radius: 10px;
+    }
+    .about-wrapper {
+        margin: 100px 30px 0 30px;
+    }
+    .hero-wrapper {
+        padding-left: 30px;
+    }
+}
+@media(max-width: 640px) {
+    .hero-wrapper p {
+        font-size: 20px;
+    }
+    .hero-wrapper span {
+        font-size: 42px;
+    }
+}
 /* profles section */
 .profiles-section {
     height: 100vh;
@@ -358,9 +388,8 @@ header nav ul li a:hover:after {
 }
 /* clients section */
 .clients-section {
-    position: relative;
-    height: 100vh;
     width: 100%;
+    padding-bottom: 200px;
     text-align: center;
     background-color: #272121;
 }
@@ -371,12 +400,23 @@ header nav ul li a:hover:after {
 }
 .clients-wrapper {
     display: grid;
-    position: absolute;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     gap: 50px;
     margin: 50px 150px 0 150px;
+}
+@media(max-width: 1400px) {
+    .clients-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    .items {
+        margin: auto;
+        justify-content: center;
+    }
 }
 .items {
     display: flex;
@@ -405,6 +445,12 @@ header nav ul li a:hover:after {
 .items:not(:hover) {
     transition: 0.5s ease;
     transform: scale(1);
+}
+@media(max-width: 830px) {
+    .jartex-network-img {
+        height: 300px;
+        width: 300px;
+    }
 }
 /* contact section */
 .contact-section {
